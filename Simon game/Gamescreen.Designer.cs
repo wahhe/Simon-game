@@ -54,7 +54,7 @@
             this.yellowButton.Size = new System.Drawing.Size(166, 182);
             this.yellowButton.TabIndex = 1;
             this.yellowButton.UseVisualStyleBackColor = false;
-            this.yellowButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.yellowButton_MouseClick);
+            this.yellowButton.Click += new System.EventHandler(this.yellowButton_Click);
             // 
             // redButton
             // 

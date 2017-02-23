@@ -28,26 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.playagainButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.gameoverLabel = new System.Windows.Forms.Label();
             this.plLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // playagainButton
-            // 
-            this.playagainButton.BackColor = System.Drawing.Color.Transparent;
-            this.playagainButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.playagainButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.playagainButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.playagainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playagainButton.ForeColor = System.Drawing.Color.Pink;
-            this.playagainButton.Location = new System.Drawing.Point(0, 203);
-            this.playagainButton.Name = "playagainButton";
-            this.playagainButton.Size = new System.Drawing.Size(350, 79);
-            this.playagainButton.TabIndex = 0;
-            this.playagainButton.Text = "PLAY AGAIN";
-            this.playagainButton.UseVisualStyleBackColor = false;
             // 
             // closeButton
             // 
@@ -55,12 +39,13 @@
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.closeButton.ForeColor = System.Drawing.Color.Green;
-            this.closeButton.Location = new System.Drawing.Point(0, 288);
+            this.closeButton.Location = new System.Drawing.Point(0, 217);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(350, 79);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "CLOSE";
             this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // gameoverLabel
             // 
@@ -81,9 +66,8 @@
             this.plLabel.ForeColor = System.Drawing.Color.Red;
             this.plLabel.Location = new System.Drawing.Point(67, 127);
             this.plLabel.Name = "plLabel";
-            this.plLabel.Size = new System.Drawing.Size(227, 19);
+            this.plLabel.Size = new System.Drawing.Size(0, 19);
             this.plLabel.TabIndex = 3;
-            this.plLabel.Text = "you patten length was : 3";
             this.plLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameOverScreen
@@ -94,7 +78,6 @@
             this.Controls.Add(this.plLabel);
             this.Controls.Add(this.gameoverLabel);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.playagainButton);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "GameOverScreen";
             this.Size = new System.Drawing.Size(350, 370);
@@ -104,8 +87,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button playagainButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label gameoverLabel;
         private System.Windows.Forms.Label plLabel;
